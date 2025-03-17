@@ -32,22 +32,10 @@ The goal is to explore:
 ✔️ **Top 10 Highest-Grossing Movies**  
 ✔️ **Movie Release Trends (Year-wise count)**  
 ✔️ **Distribution of Movie Ratings**  
-✔️ **Budget vs. Revenue Correlation**  
 
 ### **3️⃣ Power BI Dashboard**
 - **Visuals Created:**
   - Movies Released per Year 📈
   - Top 10 Movies by Revenue 💰
-  - Budget vs. Revenue Scatter Plot 🎭
+  - Sum of Revenue by released year Scatter Plot 🎭
   - Genre Popularity Bar Chart 📊
-
-## 📌 Power BI DAX Formulas Used
-```DAX
-# Average Movie Rating Per Year
-Avg_Rating_Per_Year = AVERAGEX(FILTER(movies, movies[release_year] = EARLIER(movies[release_year])), movies[vote_average])
-
-# Profit Calculation
-Profit = movies[revenue] - movies[budget]
-
-# Movie Count by Genre
-Movie_Count_Genre = COUNTROWS(movies)
